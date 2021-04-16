@@ -153,7 +153,7 @@ _./src/index.html
 
 _./src/index.ts_
 
-```typescript
+```dif
 const maxAffected = stats.reduce(
   (max, item) => (item.value > max ? item.value : max),
   0
@@ -165,7 +165,7 @@ const maxAffected = stats.reduce(
 _./src/index.ts_
 
 ```dif
-const affectedRadiusScale =  d3
+ const affectedRadiusScale =  d3
 +  .scaleThreshold<number,number>()
 +  .domain([0,10,100,1000,5000,10000,15000])
 +  .range([0,5,10,15,20,35,40]);
@@ -176,14 +176,12 @@ const affectedRadiusScale =  d3
 _./src/index.ts_
 
 ```dif
-
 + const calculateRadiusBasedOnAffectedCases = (data :ResultEntry[],comunidad: string) => {
 + const entry =  data.find((item) => item.name === comunidad);
   
  return entry ? affectedRadiusScale(entry.value) : 0;
 };
 ```
-
 - Let's tie it up with the circle rendering code that we created before:
 
 _./src/index.ts_
