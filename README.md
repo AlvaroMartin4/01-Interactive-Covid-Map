@@ -166,9 +166,9 @@ _./src/index.ts_
 
 ```dif
 const affectedRadiusScale =  d3
-+ .scaleThreshold<number,number>()
-+ .domain([0,10,100,1000,5000,10000,15000])
-+ .range([0,5,10,15,20,35,40]);
++  .scaleThreshold<number,number>()
++  .domain([0,10,100,1000,5000,10000,15000])
++  .range([0,5,10,15,20,35,40]);
 ```
 
 - Let's create a helper function to glue the community name with the affected cases according to the data we want to show.
@@ -176,6 +176,7 @@ const affectedRadiusScale =  d3
 _./src/index.ts_
 
 ```dif
+
 + const calculateRadiusBasedOnAffectedCases = (data :ResultEntry[],comunidad: string) => {
 + const entry =  data.find((item) => item.name === comunidad);
   
